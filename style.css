@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap");
+:root {
+  /* colors */
+  --navy-blue: #182c4c;
+  --dark-blue: #106ba5;
+  --blue: #127bbd;
+  --light-blue: #62a4d1;
+  --gray: #ebecf0;
+  --white: #ffffff;
+  /* fonts */
+  --roboto: "Roboto", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.trello {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+  height: 100vh;
+  width: 100vw;
+  color: var(--navy-blue);
+  font-family: var(--roboto);
+  overflow: hidden;
+}
+
+.trello__header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5px 10px;
+  color: var(--white);
+  background: var(--dark-blue);
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+
+.search-form__input {
+  background: var(--light-blue);
+  width: 80%;
+  padding-left: 5px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-form__input::placeholder {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.search-form__input:focus {
+  border: none;
+}
+
+.search-form__button {
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  margin-left: 70%;
+  align-self: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__icon {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow {
+  color: var(--light-blue);
+  margin-right: 5px;
+}
+
+.arrow--active {
+  color: var(--white);
+}
+
+.arrow--left {
+  transform: scaleX(-1);
+}
+
+.trello__main {
+  grid-area: main;
+  background: var(--blue);
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+}
+
+.trello__main > *{
+  grid-column: 2 / -2;
+}
+
+
+.board {
+  font-size: 20px;
+  grid-column: 1/ -1;
+  display: grid;
+  grid-gap: 0 10px;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
+  justify-content: start;
+  padding: 5px 15px;
+  overflow-y: hidden;
+  overflow-x:scroll;
+  scroll-snap-type: x mandatory;
+  /*Firefox scroll bar*/
+  scrollbar-color: var(--light-blue) var(--navy-blue);
+}
+/*Chorme bar*/
+.board::-webkit-scrollbar{
+  border-radius: 5px;
+  width: 20px;
+  background-color: var(--navy-blue);
+}
+
+.board::-webkit-scrollbar-thumb{
+  background-color: var(--light-blue);
+  border-radius: 5px;
+}
+
+.board::before,
+.board::after {
+  content: ‘’;
+}
+
+.list-wrapper {
+  scroll-snap-align: initial;
+  min-width: 270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.list-wrapper:first-child {
+  margin-left: 5px;
+} 
+
+.list {
+  background: var(--gray);
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list__header {
+  width: 100%;
+}
+
+.list__cards {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 230px;
+  min-height: 20px;
+  margin: 2.5px 2px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 #b3b9c4;
+  background: var(--white);
+}
+
+.card__desc{
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.add-new {
+  display: flex;
+  padding: 10px;
+  font-size: 18px;
+  max-height: 32px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.add-new__icon {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.add-new--list{
+  background: var(--light-blue);
+  width: 270px;
+  border-radius: 5px;
+  color: var(--white);
+}

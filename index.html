@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>HTML & CSS challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="trello">
+    <header class="trello__header">
+      <form class="search-form">
+        <input type="text" name="search" id="" placeholder="Search cards..." class="search-form__input" />
+        <button class="search-form__button">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div class="logo">
+        <div class="logo__icon">
+          <i class="fab fa-trello"></i>
+        </div>
+        <div class="logo_text">
+          <h1>Trello</h1>
+        </div>
+      </div>
+      <div class="arrows">
+        <div class="arrow arrow--left">
+          <i class="fas fa-redo"></i>
+        </div>
+        <div class="arrow arrow--right arrow--active">
+          <i class="fas fa-redo"></i>
+        </div>
+      </div>
+    </header>
+    <main class="trello__main">
+      <div class="board">
+        <div class="list-wrapper">
+          <div class="list">
+            <div class="list__header">
+              <h2>To do</h2>
+            </div>
+            <div class="list__cards">
+              <div class="card">
+                <div class="card__desc">
+                  <p>Integrate frontend with backend</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Create integration test</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Setup production environment</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Deply to production</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-new add-new--card">
+              <div class="add-new__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="add-new__text">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <div class="list">
+            <div class="list__header">
+              <h2>To do</h2>
+            </div>
+            <div class="list__cards">
+              <div class="card">
+                <div class="card__desc">
+                  <p>Integrate frontend with backend</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Create integration test</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Setup production environment</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Deply to production</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-new add-new--card">
+              <div class="add-new__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="add-new__text">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <div class="list">
+            <div class="list__header">
+              <h2>To do</h2>
+            </div>
+            <div class="list__cards">
+              <div class="card">
+                <div class="card__desc">
+                  <p>Integrate frontend with backend</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Create integration test</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Setup production environment</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Deply to production</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-new add-new--card">
+              <div class="add-new__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="add-new__text">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <div class="list">
+            <div class="list__header">
+              <h2>In progress</h2>
+            </div>
+            <div class="list__cards">
+              <div class="card">
+                <div class="card__desc">
+                  <p>Create unit test</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Implement API services</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Mock frontend</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-new add-new--card">
+              <div class="add-new__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="add-new__text">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <div class="list">
+            <div class="list__header">
+              <h2>Ready for test</h2>
+            </div>
+            <div class="list__cards">
+              <div class="card">
+                <div class="card__desc">
+                  <p>Implement use cases</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Design API</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-new add-new--card">
+              <div class="add-new__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="add-new__text">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <div class="list">
+            <div class="list__header">
+              <h2>Done</h2>
+            </div>
+            <div class="list__cards">
+              <div class="card">
+                <div class="card__desc">
+                  <p>Design database model</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__desc">
+                  <p>Create models</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-new add-new--card">
+              <div class="add-new__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="add-new__text">
+                <p>Add new card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="add-new add-new--list">
+          <div class="add-new__icon">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="add-new__text">
+            <p>Add new list</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/27ff33fad7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
